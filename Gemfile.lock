@@ -80,6 +80,9 @@ GEM
       multipart-post (>= 1.2, < 3)
     ffi (1.9.3)
     formatador (0.2.4)
+    foundation-rails (5.2.2.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
     guard (2.6.0)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -267,6 +270,7 @@ DEPENDENCIES
   factory_girl_rails
   fakefs
   faker
+  foundation-rails
   guard-bundler
   guard-livereload
   guard-rspec

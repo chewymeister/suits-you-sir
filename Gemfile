@@ -18,6 +18,7 @@ gem 'omniauth-facebook'
 #frontend
 gem 'jquery-rails'
 gem 'sass-rails', '~> 4.0.2'
+gem 'foundation-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'haml'
 

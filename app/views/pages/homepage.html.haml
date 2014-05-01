@@ -1,16 +1,48 @@
-.homepage
-  %h1 Suits You Sir
-
-  .game_container
-    .style_game
-      %h3
-        Play Our Style Game
-      .player.man
-        .icon
-        %span
-          What's your Style?
-
-      .player.woman
-        .icon
-        %span
-          How well do you know your man?
+.menu
+  .slider
+    %ul
+      %li.selected.active
+        #coupling.rollover
+          %a{href: "#search"}
+        %p.nav COUPLING
+      %li.selected
+        #outfit.rollover
+          %a{href: "#about"}
+        %p.nav OUTFIT BUILDER
+      %li.selected
+        #wardrobe.rollover
+          %a{href: "#contact"}
+        %p.nav WARDROBE
+    #signup
+      %a{href: ""} SIGN UP
+#logo
+#home.container
+  #circle
+    #men-circle
+    #women-circle
+#search.container.blue
+  .header
+    %h1 Work Together.
+    %p
+      Guess what Ladies?
+      Now's your chance to rid your man of those fashion faux paus!
+      Build outfits for him, send suggestions and give feedback on the ones he's created.
+    #buttondiv
+      %button.mybutton{type: "button"} START
+#about.container.green
+  .header
+    %h1 Build Outfits.
+    %p
+      Ever wanted to build an outfit onscreen like Cher from Clueless?
+      %br/
+      Now you can!
+      %br/
+      Combine items you want to buy with ones already in your wardrobe to create the perfect outfit for any occasion.
+    #buttondiv
+      %button.mybutton{type: "button"} TRY IT OUT
+#contact.container.red
+  .header
+    %h1 Wardrobe Visualizer
+    %p Managing your wardrobe has never been simpler. You can keep track of owned items and items that take your fancy.
+    #buttondiv
+      %button.mybutton{type: "button"} SIGN UP

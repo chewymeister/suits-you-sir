@@ -1,3 +1,334 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+html,body { height: 100%; }
+
+body {
+  color: #fff;
+  margin: 0 auto; 
+}
+
+.header {
+  width: 600px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.container {
+  z-index: 1;
+  position: relative;
+  background:url(/assets/homepage/images/spiral.png) center center no-repeat;
+  background-size: 100%;
+  padding-top: 120px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.container.blue {
+  /*background-color: #0099cc;*/
+  background: #FFF;
+}
+.container.green {
+  /*background-color: #9ed846;*/
+  background: #FFF;
+}
+.container.red {
+  /*background-color: #ff6766;*/
+  background: #FFF;
+}
+
+h1 {
+  margin: 40px 0;
+  font-size: 56px;
+  line-height: 40px;
+  font-family: futuraHEAVY;
+  letter-spacing: 1px;
+  color: #000;
+  margin-bottom:28px;
+}
+
+p {
+	text-align: left;
+	font-size: 12pt;
+	line-height: 1.8em;
+	font-family: GOTHAM;
+	font-style: normal;
+	letter-spacing: 0.2px;
+	color: #000;
+	margin-top:28px;
+	margin-bottom:28px;
+}
+
+.nav {
+	text-align: center;
+	margin-top:6px;
+	margin-bottom: 6px;
+	font-size: 12px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;  
+  margin: 0 10px;
+  font-family: GOTHAM;
+  font-size: 12pt;
+  letter-spacing: 0px;
+  line-height: 0em;
+}
+
+/* FORM THINGS */
+.mybutton {
+	 position: relative;
+	 display: inline-block;
+	 height: 40px;
+	 width: 150px;
+	 background: #FFF;
+	 font-family: GOTHAM;
+	 color: #000;
+	 font-size: 12pt;
+	 
+	 text-align:center;
+	 border-width: thin;
+	 border-style: solid;
+	 border-color: #000;
+	 cursor: hand; 
+}
+.mybutton:hover {
+	background:#D8D8D8;
+	cursor: hand;
+}
+.mybuton:focus {
+	outline:0;
+}
+.mybuton:active {
+	background: #000;
+}
+#buttondiv {
+	float: left;
+}
+/*.btn {
+  box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   -webkit-box-sizing:border-box;
+  
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  height: 50px;
+  background-color: #666;
+  
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0px 1px 1px #888;
+}*/
+
+a.btn span.btn {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  z-index: -1;
+  
+  width: 100%;
+  background-color: #444;
+}
+
+.btn:active,
+.btn:active > span.btn{
+  top: 2px;
+}
+
+.btn.active,
+.btn.active > span.btn {
+  top: 2px;
+}
+
+.btn-small {
+  height: 30px;
+  font-size: 12px;
+  line-height: 10px;
+}
+
+a.btn-small span.btn {
+  height: 30px;
+}
+
+/* Menu Styles */
+
+.menu {
+  width: 100%;
+  position: fixed;
+  height: 100px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.menu .slider {
+  position: relative;
+  left: 10%;
+  width: 80%;
+  text-align: center;
+}
+  
+.menu .slider .bar, .menu .slider .bar .before {
+  height: 20px;
+
+  transition: .5s; 
+  -webkit-transition: .5s; 
+ 
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+    
+.menu .slider .bar {
+  position: relative;
+  left: 3px;
+  width: 100%;
+  background-color: #777;
+}
+.menu .slider .bar .before {
+  width: 100px;
+  float: left;
+  position: relative;
+  left: -3px;
+}
+.menu .slider .bar a.knob { 
+  position: absolute;
+  top: -5px;
+  left: 0;
+  margin: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  
+  transition: .5s; 
+  -webkit-transition: .5s; 
+}
+.menu ul { 
+  height: 100%; 
+  display: inline-block;
+  margin: 20px 0 15px 0;
+}
+.menu ul li {
+  margin: 0 40px;
+  font-size: 12px;
+  font-weight: bold;
+  float: left;
+}
+.menu ul li a { color: #444; margin: 0; }
+
+/*HOVER*/
+.rollover {
+  display : block;
+  height : 59px;
+  width: 59px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rollover a{
+  display : block;
+  width : 59px;
+  height : 59px;
+}
+
+.rollover a:hover {
+  display : block;
+  width : 59px;
+  height : 59px;
+}
+
+#coupling.rollover a {
+  background-image:url( "/assets/homepage/images/coupling-normal.png" );
+}
+
+#coupling.rollover  a:hover {
+  background-image:url( "/assets/homepage/images/coupling-hover.png" );
+}
+
+#outfit.rollover  a { 
+  background-image:url( "/assets/homepage/images/outfitbuilder-normal.png" );
+}
+
+#outfit.rollover  a:hover { 
+  background-image:url( "/assets/homepage/images/outfitbuilder-hover.png" );
+}
+
+#wardrobe.rollover  a { 
+  background-image:url( "/assets/homepage/images/wardrobe-normal.png" );
+}
+
+#wardrobe.rollover  a:hover { 
+  background-image:url( "/assets/homepage/images/wardrobe-hover.png" );
+}
+
+#logo {
+	background: url( "/assets/homepage/images/logo.png" );
+	width: 137px;
+	height: 78px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 100;
+}
+
+#circle {
+	width: 460px;
+  height: 460px;
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#men-circle, #women-circle {
+	width: 100px;
+	height: 100px;
+	background: #000;
+	-moz-border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  border-radius: 50%;
+  margin-top: 150px;
+}
+
+#men-circle {
+	float:left;
+	margin-left: 100px;
+}
+
+#women-circle {
+	float:right;
+	margin-right: 100px;
+}
+
+li.selected a {
+  background: url( "/assets/homepage/images/coupling-active.png" );
+}
+
+.signup {
+  float: right;
+}

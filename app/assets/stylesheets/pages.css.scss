@@ -1,15 +1,86 @@
-html,body { height: 100%; }
+@import "mixins";
+
+@font-face {
+  font-family: GOTHAM;
+  src: asset_path('Gotham-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: futuraHEAVY;
+  src: asset_path("FuturaStd-Heavy.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    outline: none;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  position: absolute;
+  right: 0;
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* CSS RESET DONE */
+
+html,body { height: 100%; } 
 
 body {
   color: #fff;
   margin: 0 auto; 
 }
 
+a { text-decoration: none; }
+
+li { list-style: none; }
+
 .header {
   width: 600px;
   text-align: left;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .clearfix {
@@ -19,25 +90,44 @@ body {
 .container {
   z-index: 1;
   position: relative;
-  background:url(/assets/homepage/images/spiral.png) center center no-repeat;
+  background: url(/assets/homepage/images/spiral.png) center center no-repeat;
   background-size: 100%;
   padding-top: 120px;
   text-align: center;
-  height: 100%;
+  /* height: 100%; */
+  height: 805px;
   width: 100%;
 }
 
 .container.blue {
-  /*background-color: #0099cc;*/
   background: #FFF;
 }
+
 .container.green {
-  /*background-color: #9ed846;*/
-  background: #FFF;
+  /* background: #FFF; */
+  background: url("/assets/backgrounds/outfit-builder/outfit-builder-master.png") center 150px no-repeat;
+
+  .top-row {
+    position: relative;
+    width: 100%;
+
+    .header {
+      margin-left: 195px;
+      width: 430px;
+
+      p {
+        margin: 10px 0;
+      }
+    }
+  }
 }
+
 .container.red {
-  /*background-color: #ff6766;*/
-  background: #FFF;
+  background: url("/assets/backgrounds/wardrobe/wardrobe.png") center 360px no-repeat;
+  
+  .header {
+    background: #FFF;
+  }
 }
 
 h1 {
@@ -108,9 +198,13 @@ a {
 .mybuton:active {
 	background: #000;
 }
-#buttondiv {
+
+.mybutton {
+  width: 200px;
+  height: 50px;
 	float: left;
 }
+
 /*.btn {
   box-sizing:border-box;
    -moz-box-sizing:border-box;
@@ -178,6 +272,8 @@ a.btn-small span.btn {
   position: relative;
   left: 10%;
   width: 80%;
+  margin: 0;
+  /* margin: 0 auto; */
   text-align: center;
 }
   
@@ -256,27 +352,27 @@ a.btn-small span.btn {
 }
 
 #coupling.rollover a {
-  background-image:url( "/assets/homepage/images/coupling-normal.png" );
+  background-image: url( "/assets/homepage/images/coupling-normal.png" );
 }
 
 #coupling.rollover  a:hover {
-  background-image:url( "/assets/homepage/images/coupling-hover.png" );
+  background-image: url( "/assets/homepage/images/coupling-hover.png" );
 }
 
 #outfit.rollover  a { 
-  background-image:url( "/assets/homepage/images/outfitbuilder-normal.png" );
+  background-image: url( "/assets/homepage/images/outfitbuilder-normal.png" );
 }
 
 #outfit.rollover  a:hover { 
-  background-image:url( "/assets/homepage/images/outfitbuilder-hover.png" );
+  background-image: url( "/assets/homepage/images/outfitbuilder-hover.png" );
 }
 
 #wardrobe.rollover  a { 
-  background-image:url( "/assets/homepage/images/wardrobe-normal.png" );
+  background-image: url( "/assets/homepage/images/wardrobe-normal.png" );
 }
 
 #wardrobe.rollover  a:hover { 
-  background-image:url( "/assets/homepage/images/wardrobe-hover.png" );
+  background-image: url( "/assets/homepage/images/wardrobe-hover.png" );
 }
 
 #logo {
@@ -309,9 +405,7 @@ a.btn-small span.btn {
 	width: 100px;
 	height: 100px;
 	background: #000;
-	-moz-border-radius: 50%; 
-  -webkit-border-radius: 50%; 
-  border-radius: 50%;
+  @include border-radius(50%);
   margin-top: 150px;
 }
 
@@ -329,6 +423,13 @@ li.selected a {
   background: url( "/assets/homepage/images/coupling-active.png" );
 }
 
-.signup {
-  float: right;
+#signup {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+
+  a { 
+    color: black;
+  }
 }

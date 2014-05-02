@@ -100,12 +100,18 @@ li { list-style: none; }
 }
 
 .container.blue {
-  background: #FFF;
+  /* background: #FFF; */
+  background: url("/assets/backgrounds/coupling/couple.jpg") 525px 130px no-repeat;
+
+  .header {
+    width: 200px;
+    margin-left: 300px;
+  }
 }
 
 .container.green {
   /* background: #FFF; */
-  background: url("/assets/backgrounds/outfit-builder/outfit-builder-master.png") center 150px no-repeat;
+  background: url("/assets/backgrounds/outfit-builder/outfit-builder-master.png") center 130px no-repeat;
 
   .top-row {
     position: relative;
@@ -123,10 +129,22 @@ li { list-style: none; }
 }
 
 .container.red {
-  background: url("/assets/backgrounds/wardrobe/wardrobe.png") center 360px no-repeat;
+  background: url("/assets/backgrounds/wardrobe/wardrobe-master.png") 110px 130px no-repeat;
+  /* background: url("/assets/backgrounds/wardrobe/wardrobe.png") center 360px no-repeat; */
   
   .header {
+    width: 430px;
+    margin-left: 300px;
     background: #FFF;
+
+    h1 {
+      line-height: 0.8em;
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
   }
 }
 

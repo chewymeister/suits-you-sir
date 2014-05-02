@@ -377,22 +377,33 @@ a.btn-small span.btn {
   background-image: url( "/assets/homepage/images/coupling-hover.png" );
 }
 
+#coupling.rollover.highlight  a {
+  background-image: url( "/assets/icons/coupling/coupling-active.png" );
+}
+
 #outfit.rollover  a { 
-  background-image: url( "/assets/homepage/images/outfitbuilder-normal.png" );
+  background-image: url( "/assets/icons/outfit-builder/outfit-builder-normal.png" );
 }
 
 #outfit.rollover  a:hover { 
-  background-image: url( "/assets/homepage/images/outfitbuilder-hover.png" );
+  background-image: url( "/assets/icons/outfit-builder/outfit-builder-hover.png" );
+}
+
+#outfit.rollover.highlight  a {
+  background-image: url( "/assets/icons/outfit-builder/outfit-builder-active.png" );
 }
 
 #wardrobe.rollover  a { 
-  background-image: url( "/assets/homepage/images/wardrobe-normal.png" );
+  background-image: url( "/assets/icons/wardrobe/wardrobe-normal.png" );
 }
 
 #wardrobe.rollover  a:hover { 
-  background-image: url( "/assets/homepage/images/wardrobe-hover.png" );
+  background-image: url( "/assets/icons/wardrobe/wardrobe-hover.png" );
 }
 
+#wardrobe.rollover.highlight  a {
+  background-image: url( "/assets/icons/wardrobe/wardrobe-active.png" );
+}
 #logo {
 	background: url( "/assets/homepage/images/logo.png" );
 	width: 137px;

@@ -1,5 +1,10 @@
 (($) ->
   $ ->
+    # Highlight functionality
+    $('.rollover').click ->
+      $('.rollover').removeClass("highlight")
+      $(this).addClass("highlight")
+      return
     
     # Slider functionality
     
